@@ -29,11 +29,13 @@ function validarCpf(n){
 			sum *= 10;
 
 			if(sum % 11 != firstDigit){
-				return false;
-			}else if(sum % 11 == 10){
-				if(firstDigit != 0){
-					return false;
+			   if(sum % 11 == 10){
+			       if(firstDigit != 0){
+				  return false;
 				}
+			   }else{
+			       return false
+			   }
 			}
 			
 			sum = 0;
@@ -45,11 +47,13 @@ function validarCpf(n){
 			sum *= 10;
 
 			if(sum % 11 != secondDigit){
-				return false;
-			}else if(sum % 11 == 10){
-				if(secondDigit != 0){
-					return false;
+			   if(sum % 11 == 10){
+			       if(firstDigit != 0){
+				  return false;
 				}
+			   }else{
+			       return false
+			   }
 			}
 			return true;
  }
